@@ -5,7 +5,6 @@ body {
     color: #F0E7C8;
 }
 
-/* subtle background depth */
 body::before {
     content: "";
     position: fixed;
@@ -23,16 +22,21 @@ body > * {
     z-index: 1;
 }
 
-/* HEADER */
-header {
+.header-glass {
     text-align: center;
     padding: 60px 20px 40px;
+    background: rgba(178, 32, 0, 0.75);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(240, 231, 200, 0.25);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
 
 .title-hover {
     font-family: 'Cinzel', serif;
     font-size: 42px;
     margin: 0;
+    color: #F0E7C8;
     transition: transform 0.3s ease;
 }
 
@@ -42,16 +46,17 @@ header {
 
 .subtitle {
     margin-top: 10px;
-    opacity: 0.9;
+    color: #F0E7C8;
+    opacity: 0.95;
 }
 
 .stack {
     margin-top: 10px;
     font-size: 14px;
-    opacity: 0.75;
+    color: #F0E7C8;
+    opacity: 0.8;
 }
 
-/* SECTIONS */
 section {
     max-width: 1000px;
     margin: auto;
@@ -60,14 +65,13 @@ section {
 
 h2 {
     margin-bottom: 15px;
+    color: #F0E7C8;
 }
 
-/* ABOUT */
 .about p {
     line-height: 1.7;
 }
 
-/* PERSONAL */
 .personal {
     background: rgba(240, 231, 200, 0.96);
     border-radius: 14px;
@@ -92,7 +96,6 @@ h2 {
     color: #232830;
 }
 
-/* PROFILE IMAGE */
 .personal-image {
     width: 180px;
     height: 180px;
@@ -107,7 +110,6 @@ h2 {
     object-fit: cover;
 }
 
-/* PROJECTS */
 .grid {
     column-count: 3;
     column-gap: 15px;
@@ -132,13 +134,11 @@ h2 {
     line-height: 1.6;
 }
 
-/* hover animation */
 .hover-lift:hover {
     transform: translateY(-6px);
     box-shadow: 0 12px 30px rgba(0,0,0,0.25);
 }
 
-/* CONTACT */
 .contact {
     text-align: center;
 }
@@ -160,13 +160,11 @@ h2 {
     color: #FFB133;
 }
 
-/* ICON */
 .material-symbols-outlined {
     font-size: 20px;
     color: #F0E7C8;
 }
 
-/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
@@ -174,13 +172,12 @@ footer {
     color: #F0E7C8;
 }
 
-/* ANIMATIONS */
 .fade-in {
-    animation: fadeIn 0.8s ease forwards;
+    animation: fadeIn 0.8s ease;
 }
 
 .slide-up {
-    animation: slideUp 0.8s ease forwards;
+    animation: slideUp 0.8s ease;
 }
 
 .float {
@@ -203,7 +200,6 @@ footer {
     100% { transform: translateY(0); }
 }
 
-/* RESPONSIVE */
 @media (max-width: 800px) {
     .grid {
         column-count: 2;
